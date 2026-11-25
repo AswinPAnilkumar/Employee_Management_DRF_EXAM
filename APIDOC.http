@@ -1,0 +1,60 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "Anas",
+    "email" : "anas@gmail.com",
+    "password" : "anas@123"
+}
+
+###
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username" : "Hari",
+    "password" : "hari@123"
+}
+
+###
+GET http://127.0.0.1:8000/employee/
+Accept: application/json
+Authorization: Token 4fbcf2c66568fc02747f2b243130921a14b21543
+
+###
+POST http://127.0.0.1:8000/employee/
+Content-Type: application/json
+Authorization: Token 35a0b66b7b4c67d7adc27dd8fd45739fcf51b1af
+
+{
+    "emp_name" : "Hari",
+    "department" : "HR",
+    "designation" : "HR Head",
+    "salary" : "40000"
+}
+
+###
+GET http://127.0.0.1:8000/employee/1/
+Accept: application/json
+Authorization: Token 35a0b66b7b4c67d7adc27dd8fd45739fcf51b1af
+
+###
+PUT http://127.0.0.1:8000/employee/4/
+Content-Type: application/json
+Authorization: Token 35a0b66b7b4c67d7adc27dd8fd45739fcf51b1af
+
+{
+    "emp_name" : "Hari",
+    "department" : "HR",
+    "designation" : "HR",
+    "salary" : "40000"   
+}
+
+###
+DELETE http://127.0.0.1:8000/employee/4/
+Authorization: Token 35a0b66b7b4c67d7adc27dd8fd45739fcf51b1af
